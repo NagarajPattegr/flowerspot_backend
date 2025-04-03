@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../includes/bg.jpg');
+    background-repeat:repeat;
+    background-size: cover;
+    background-position: center;
+} 
+#hero-section{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(auto-fit , minmax(500px , 1fr));
+}
+#orders , #outer-container{
+    width: 50%;
+    height: 100%;
+}
+#outer-container{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right:2px solid rgb(0, 0, 0);
+}
+#orders{
+    border-left:2px solid rgb(0, 0, 0);
+}
+#product-desc{
+    height: 50px;
+    margin: 0px 30px;
+    width: 80%;
+}
+#msg{
+    width:80%;
+    height: 20px;
+    text-align: center;
+    display: none;
+    margin:0 50%;
+    font-size: 1.3rem;
+} 
