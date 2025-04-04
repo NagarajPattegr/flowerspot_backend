@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
          );
          const data =await response.text();
-         console.log(data);
-         console.log("Hello")
     })
     const commentSection = document.getElementById("review-section");
 
@@ -41,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const comments = await response.json();
         
                 if (comments.length > 0) {
-                    commentSection.innerHTML = ""; // Clear existing comments
+                    commentSection.innerHTML = ""; 
         
                     comments.forEach(comment => {
                         const commentCard = document.createElement("div");
@@ -68,7 +66,24 @@ document.addEventListener("DOMContentLoaded", () => {
         getComments();
         
     },1000);
-    
-
+    document.getElementById("addToCartBtn").addEventListener("click",async (e)=>{
+        e.preventDefault();
+        const response = await fetch("./controllers/cartcontroller.php",
+            {
+                method:"POST",
+                headers:{
+                    'Content-Type':"application/json"
+                },
+                body:JSON.stringify({
+                    flowerId:pid,
+                    id:uid
+                })
+            }
+         );
+         const data =await response.text();
+         if(data == 'Sucess'){
+            location.href=`cart.php?user_id=${uid}`;
+         }
+    });
     })
     

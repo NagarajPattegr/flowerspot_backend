@@ -16,7 +16,7 @@
    <link rel="stylesheet" href="./css/indexfile.css">
  </head>
  <body>
-   <?php include('./includes/nav.html');?>
+   <?php include('./includes/nav.php');?>
    <main>
         <div class="herosection">
             <div class="herotext">

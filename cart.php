@@ -11,10 +11,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
-    <link rel="stylesheet" href="./css/navigation.css">
     <link rel="icon" href="./includes/website_logo.png">
+    <link rel="stylesheet" href="./css/cart.css">
 </head>
 <body>
-<?php include('./includes/nav.html');?>
+<?php include('./includes/nav.php');?>
+<main>
+    <div class="cartcontainer">
+
+    </div>
+  </main>
+  <script src="./js/cart.js"></script>
+  <script src="./js/nav.js"></script>
 </body>
 </html>

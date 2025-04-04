@@ -22,11 +22,15 @@
             }
             $hash = password_hash($password , PASSWORD_DEFAULT);
             $query = "INSERT INTO users (user_name , email , password , address , city , pincode) VALUES ('$name' , '$email' , '$hash' , '$address' , '$city' , '$pincode')";
-            $result = $db->insertData($connection,$query);
-            if($result == "success"){
+            try{
+                $result = mysqli_query($connection , $query);
+                if($result){
                 echo "success";
-            }else{
-                echo "Can`t register";
+                }else{
+                    echo "Not sucess";
+                }
+            }catch(mysqli_sql_exception){
+                echo "Error";
             }
         }
     }

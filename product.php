@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productpage</title>
     <link rel="icon" href="./includes/website_logo.png">
-    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="./css/productPage.css">
 </head>
 <body>
 <main>
@@ -26,8 +26,8 @@
                 <p id="productDescription"></p>
                 <h2 id="productPrice">&#8377</h2>
                 <p id="productType"></p>
-                <a  id="buyNowBtn">Buy Now</a>
-                <a id="addToCartBtn">Add to Cart</a>
+                <button  id="buyNowBtn">Buy Now</button>
+                <button id="addToCartBtn">Add to Cart</button>
             </div>
         </section>
 

@@ -6,6 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      $connection = $db->connect();
      $data = json_decode(file_get_contents("php://input"), true);
      if (isset($data['id']) && isset($data['flowerId']) && isset($data['commentText'])) {
+          if($connection){
           $comment = $data['commentText'];
           $id = $data['id'];
           $fid = $data['flowerId'];
@@ -13,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           if (mysqli_num_rows($name) > 0) {
                $nmobj = mysqli_fetch_assoc($name);
                $nm = $nmobj['user_name'];
-               echo $nm;
+               echo $comment."<br>";
                $query = "INSERT INTO comments (comment,user_name,flower_id) VALUES ('$comment','$nm','$fid ')";
                try {
                     $res = mysqli_query($connection, $query);
@@ -27,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      } else {
           echo "Not success";
      }
+}
 }
 $db = new DataBase();
 $connection = $db->connect();

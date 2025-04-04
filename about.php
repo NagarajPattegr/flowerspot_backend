@@ -15,6 +15,7 @@
     <link rel="icon" href="./includes/website_logo.png">
 </head>
 <body>
-<?php include('./includes/nav.html');?>
+<?php include('./includes/nav.php');?>
+<script src="./js/nav.js"></script>
 </body>
 </html>
