@@ -2,24 +2,24 @@ document.addEventListener("DOMContentLoaded", async function () {
     const container = document.querySelector('.container');
     let flowers = [];
 
-    // Fetch data from API
+
     async function fetchFlowers() {
         try {
             const response = await fetch('http://localhost/flowerspot/controllers/indexController.php');
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
-            flowers = await response.json(); // Assign fetched data
+            flowers = await response.json(); 
             console.log("Flowers data:", flowers);
-            renderProduct(flowers); // Render initial list
+            renderProduct(flowers); 
         } catch (error) {
             console.error('Error fetching flower data:', error);
         }
     }
 
-    await fetchFlowers(); // Fetch flowers when the page loads
+    await fetchFlowers(); 
 
-    // Event listeners for filtering
+
     document.getElementById("Decoration").addEventListener("click", () => {
         const decorationFlowers = flowers.filter(val => val.type === "Decoration");
         setActiveButton("Decoration");
