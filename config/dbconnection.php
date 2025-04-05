@@ -11,13 +11,5 @@ class DataBase{
             echo "Error";
         }
     }
-    function insertData($connection,$query){
-        try{
-            $result = mysqli_query($connection , $query);
-            echo "Sucess";
-        }catch(mysqli_sql_exception){
-            echo "Error";
-        }
-    }
 }
 ?>

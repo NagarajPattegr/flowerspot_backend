@@ -85,5 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
             location.href=`cart.php?user_id=${uid}`;
          }
     });
+    buy.addEventListener("click" , (e)=>{
+        location.href = `checkout.php?fid=${pid}&user_id=${uid}&price=${price}`;
+    })
     })
     
