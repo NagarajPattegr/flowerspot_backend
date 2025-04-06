@@ -21,7 +21,7 @@ header {
     height: 12vh;
     border-bottom: 1px solid rgb(0, 140, 255);
     display: flex;
-    background-color:#292929;
+    background-color: rgb(14, 9, 19);
     justify-content: space-between;
     align-items: center;
     position: fixed;
@@ -45,10 +45,6 @@ header img {
     position: relative;
     z-index: 1;
     margin-bottom: 1rem;
-}
-.nav-list li:first-child{
-    text-decoration: underline;
-   text-decoration-color: rgb(0, 140, 255);
 }
 a{
     text-decoration: none;
@@ -85,7 +81,7 @@ a{
         position: fixed;
         top: 0;
         right: -100%;
-        background-color: #292929;
+        background-color: rgb(14, 9, 19);
         height: 100vh;
         justify-content: flex-start;
         width: 300px;
@@ -98,4 +94,8 @@ a{
     .active {
         right: 0%;
     }
+}
+.nav-list li:nth-child(5){
+    font-size: 2rem;
+    color: red;
 }

@@ -14,6 +14,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #container {
@@ -72,7 +75,7 @@ label {
 #container form div a {
     text-align: center;
     text-align: center;
-    color: white;
+    color: rgb(0, 217, 255);
     text-decoration: none;
     margin:0 30px;
 }
@@ -86,7 +89,7 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: #00d9ff;
-    color: #fff;
+    color: #000000;
     border: 1px solid #000;
     outline: none;
 }

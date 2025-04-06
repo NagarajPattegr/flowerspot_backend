@@ -6,6 +6,7 @@
     <title>Sign-up</title>
     <link rel="stylesheet" href="./css/forms.css">
     <link rel="icon" href="./includes/website_logo.png">
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 <body>
     <div id="container">
@@ -38,11 +39,12 @@
             <input type="text" id="pin" name="pin" placeholder="Enter pincode" required><br>
         </div>
         <div id="submit">
-            <a href="login.php">You already have account , Login</a>
+            <a href="login.php">You already have account , <u>Login</u></a>
             <input type="submit" id="submit" name="submit" value="submit"><br>
         </div>
         </form>
     </div>
+    <?php include("./includes/footer.php"); ?>
     <script src="./js/signup.js"></script>
 </body>
 </html>

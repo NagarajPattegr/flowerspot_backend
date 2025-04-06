@@ -48,7 +48,7 @@ container.addEventListener("click",async(e)=>{
                 method:"DELETE",
             }
         ).then(res=>res.text())
-        .then(data=>alert(data))
+        .then(data=>alert("Success"))
         .catch(err=>alert("error"));
         renderItems();
     }

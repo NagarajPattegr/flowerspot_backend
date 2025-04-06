@@ -14,6 +14,7 @@
    <link rel="stylesheet" href="./css/navigation.css">
    <link rel="icon" href="./includes/website_logo.png">
    <link rel="stylesheet" href="./css/indexfile.css">
+   <link rel="stylesheet" href="./css/footer.css">
  </head>
  <body>
    <?php include('./includes/nav.php');?>
@@ -36,6 +37,7 @@
         <div class="container">
         </div>
     </main>
+    <?php include("./includes/footer.php"); ?>
    <script src="./js/nav.js"></script>
    <script src="./js/indexpage.js"></script>
  </body>

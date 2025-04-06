@@ -13,6 +13,8 @@
     <title>Orders</title>
    <link rel="icon" href="./includes/website_logo.png">
    <link rel="stylesheet" href="./css/order.css">
+   <link rel="stylesheet" href="./css/footer.css">
+   <link rel="stylesheet" href="./css/navigation.css">
 </head>
 <body
  <?php include("./includes/nav.php");?>
@@ -21,9 +23,7 @@
             
         </div>
     </main>
-    <footer>
-        <p>&copy; 2023 FlowerSpot. All rights reserved.</p>
-    </footer>
+    <?php include("./includes/footer.php"); ?>
     <script src="./js/nav.js">
     </script>
       <script src="./js/order.js"></script>
