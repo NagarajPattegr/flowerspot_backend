@@ -6,13 +6,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($connection) {
         $user_id = isset($_GET['user_id']) ? intval($_GET['user_id']) : NULL;
         $fid = isset($_GET['fid']) ? intval($_GET['fid']) : NULL;
-        $price = isset($_GET['price']) ? intval($_GET['price']) : NULL;
+        $price = $_GET['price'];
 
         $address = isset($_POST['address']) ? htmlspecialchars(trim($_POST['address'])) : '';
         $city = isset($_POST['city']) ? htmlspecialchars(trim($_POST['city'])) : '';
         $pincode = isset($_POST['pincode']) ? htmlspecialchars(trim($_POST['pincode'])) : '';
         $payment_method = isset($_POST['payment_method']) ? htmlspecialchars(trim($_POST['payment_method'])) : '';
-        $query = "INSERT INTO orders (user_id , address , city , pincode ,payment_method , flower_id ) VALUES ('$user_id' , '$address' , '$city' , '$pincode' , '$payment_method', '$fid')";
+        echo "$price<br>";
+        $query = "INSERT INTO orders (user_id , address , city , pincode ,payment_method , flower_id , price ) VALUES ('$user_id' , '$address' , '$city' , '$pincode' , '$payment_method', '$fid' , '$price')";
         try {
             $result = mysqli_query($connection, $query);
             if ($result) {

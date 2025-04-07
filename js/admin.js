@@ -24,3 +24,5 @@ form.addEventListener("submit" , async (e)=>{
     }
     console.log(data);
 })
+
+

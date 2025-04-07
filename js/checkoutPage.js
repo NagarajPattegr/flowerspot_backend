@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const price = new URLSearchParams(window.location.search).get("price");
         const user_id =  new URLSearchParams(window.location.search).get("user_id")
 
-  
+        console.log(price);
         const formData = new FormData(form);
 
         const actionUrl = `./controllers/orderController.php?fid=${encodeURIComponent(fid)}&price=${encodeURIComponent(price)}&user_id=${encodeURIComponent(user_id)}`;

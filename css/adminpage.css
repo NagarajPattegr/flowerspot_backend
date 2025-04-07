@@ -51,3 +51,35 @@ body{
     margin:0 50%;
     font-size: 1.3rem;
 } 
+#orders {
+    max-width: 800px;
+    margin: 40px auto;
+    /* background-color: #f8f8f8; */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: scroll;
+}
+
+#orders h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+#orders h2 {
+    margin-top: 25px;
+    color: #0066cc;
+    font-size: 30px;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 5px;
+}
+
+#orders p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #000000;
+    font-size: 1.2rem;
+}

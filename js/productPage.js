@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 body:JSON.stringify({
                     commentText:comment,
                     flowerId:pid,
-                    id:uid
+                    id:uid,
+                    price:price
                 })
             }
          );
