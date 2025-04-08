@@ -1,5 +1,4 @@
-document.addEventListener("DOMContentLoaded",()=>{
-    const url =new URLSearchParams(window.location.search)
+const url =new URLSearchParams(window.location.search)
 const id = url.get('user_id');
 const container = document.querySelector(".ordercontainer");
 async function getOrderItems() {
@@ -35,5 +34,6 @@ async function  renderOrders(){
         container.appendChild(card); 
     });
 }
+document.addEventListener("DOMContentLoaded",()=>{
 renderOrders();
 })

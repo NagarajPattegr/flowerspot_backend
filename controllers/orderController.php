@@ -12,7 +12,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $city = isset($_POST['city']) ? htmlspecialchars(trim($_POST['city'])) : '';
         $pincode = isset($_POST['pincode']) ? htmlspecialchars(trim($_POST['pincode'])) : '';
         $payment_method = isset($_POST['payment_method']) ? htmlspecialchars(trim($_POST['payment_method'])) : '';
-        echo "$price<br>";
         $query = "INSERT INTO orders (user_id , address , city , pincode ,payment_method , flower_id , price ) VALUES ('$user_id' , '$address' , '$city' , '$pincode' , '$payment_method', '$fid' , '$price')";
         try {
             $result = mysqli_query($connection, $query);

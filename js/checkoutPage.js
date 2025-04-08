@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(result => {
             if(result == "success"){
             alert("Order placed successfully!");
+            location.href = `order.php?user_id=${user_id}`;
             }else{
             console.log(result);
             alert(result);
