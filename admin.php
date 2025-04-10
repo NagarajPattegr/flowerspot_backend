@@ -52,14 +52,19 @@
             $sql = "SELECT  users.user_name , flowers.flower_name , orders.price , orders.address ,orders.city , orders.pincode , orders.payment_method, orders.order_date FROM orders JOIN users ON  orders.user_id = users.id JOIN flowers ON orders.flower_id = flowers.flower_id";
             $res = mysqli_query($connection, $sql);
             if(mysqli_num_rows($res)>0){
+                $i=0;
                 while($row = mysqli_fetch_assoc($res)){
+                    echo "<div id='order_card'>";
+                    echo ++$i."<br>";
                     echo "<h2>Order at {$row['order_date']}</h2>";
+                    echo "<p>Customer name : {$row['user_name']}</p><br>";
                     echo "<p>Flower name : {$row['flower_name']}</p><br>";
                     echo "<p>Flower price : {$row['price']}</p><br>";
                     echo "<p>Payment method : {$row['payment_method']}</p><br>";
                     echo "<p>Address : {$row['address']} - </p>";
                     echo "<p>City : {$row['city']} - </p>";
                     echo "<p>Pincode : {$row['pincode']}</p><br> ";
+                    echo "</div>";
                 }
             }
             ?>
