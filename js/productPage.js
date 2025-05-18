@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     document.getElementById("submit").addEventListener("click",async ()=>{
          const comment=document.getElementById("reviewText").value;
+        if(comment){
          const response = await fetch("./controllers/productController.php",
             {
                 method:"POST",
@@ -28,8 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     price:price
                 })
             }
-         );
-         const data =await response.text();
+         ).then((data)=>{
+            document.getElementById("reviewText").value = '';
+         });
+        }
     })
     const commentSection = document.getElementById("review-section");
 

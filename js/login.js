@@ -1,6 +1,10 @@
 const form = document.querySelector('#myform');
 const submit = document.querySelector("#submit");
 const errormessage = document.getElementById("error");
+form.addEventListener("click",()=>{
+    if(errormessage.style.display=="block")
+    errormessage.style.display="none";
+})
 
 form.addEventListener("submit" , async (e)=>{
     e.preventDefault();
@@ -21,7 +25,8 @@ form.addEventListener("submit" , async (e)=>{
         location.href="admin.php";
     }
     else{
-        errormessage.style.display="block";
+        form.reset();
+            errormessage.style.display="block";
         errormessage.innerHTML=data;
     }
 })

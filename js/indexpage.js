@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     async function fetchFlowers() {
         try {
-            const response = await fetch('http://localhost/flowerspot/controllers/indexController.php');
+            const response = await fetch('./controllers/indexController.php');
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }

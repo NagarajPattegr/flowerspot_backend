@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                $nmobj = mysqli_fetch_assoc($name);
                $nm = $nmobj['user_name'];
                echo $comment."<br>";
-               $query = "INSERT INTO comments (comment,user_name,flower_id) VALUES ('$comment','$nm','$fid ')";
+               $query = "INSERT INTO comments (comment,user_name,flower_id) VALUES ('$comment','$nm','$fid')";
                try {
                     $res = mysqli_query($connection, $query);
                     if ($res) {

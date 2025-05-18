@@ -14,7 +14,7 @@
                     $user = mysqli_fetch_assoc($result);
                      if(password_verify($password , $user['password'])){
                         $_SESSION['id'] = $user['id'];
-                        if($user['email']=='admin@flowerspot.com'){
+                        if($user['email']=='adminflowerspot@gmail.com'){
                             echo "admin";
                         }else{
                             echo "success";

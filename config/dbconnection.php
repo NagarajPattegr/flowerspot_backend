@@ -5,6 +5,7 @@ class DataBase{
         try{
             $connection = mysqli_connect('localhost:3306','root','','flowerspot');
             if($connection){
+                // echo "Connect";
                 return $connection;
             }
         }catch(mysqli_sql_exception){
@@ -12,4 +13,6 @@ class DataBase{
         }
     }
 }
+// $d = new DataBase();
+// $d->connect();
 ?>

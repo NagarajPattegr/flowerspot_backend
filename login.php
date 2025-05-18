@@ -20,7 +20,7 @@
         </div>
         <div>
             <label >Password</label><br>
-            <input type="password" id="password" name="password" placeholder="Enter password" required><br>
+            <input type="password" id="password" name="password" placeholder="Enter password" required  minlength="4"><br>
         </div>
         <div id="submit">
         <a href="signup.php">You dont`t have account , <u>signup</u></a>
