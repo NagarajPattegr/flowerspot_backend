@@ -18,13 +18,13 @@ body{
     width: 100%;
     display: grid;
     grid-template-columns:repeat(auto-fit , minmax(500px , 1fr));
+    position: relative;
 }
 #orders , #outer-container{
     width: 50%;
     height: 100%;
 }
 #outer-container{
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,6 +37,7 @@ body{
 }
 #orders{
     border-left:2px solid rgb(0, 0, 0);
+    
 }
 #product-desc{
     height: 50px;
@@ -52,7 +53,7 @@ body{
     font-size: 1.3rem;
 } 
 #orders {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 40px auto;
     /* background-color: #f8f8f8; */
     padding: 30px;
@@ -84,4 +85,16 @@ body{
 }
 #order_card{
     border-bottom: 2px solid blue;
+}
+#formbl{
+    width:100vw;
+    height: 100vh;
+    background-color: black;
+    color: #0066cc;
+    display: none;
+    position: relative;
+    z-index: 100;
+}
+#orders::-webkit-scrollbar{
+    display: none;
 }

@@ -4,6 +4,7 @@ const errormessage = document.getElementById("error");
 form.addEventListener("click",()=>{
     if(errormessage.style.display=="block")
     errormessage.style.display="none";
+    console.log("Hello")
 })
 
 form.addEventListener("submit" , async (e)=>{

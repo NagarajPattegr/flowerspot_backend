@@ -17,6 +17,7 @@ async function getOrderItems() {
 }
 async function  renderOrders(){
     const items = await getOrderItems();
+    if(items){
     items.forEach(item => {
         const card = document.createElement("div");
         card.classList.add("card");
@@ -33,6 +34,10 @@ async function  renderOrders(){
     
         container.appendChild(card); 
     });
+}else{
+    container.innerHTML='No orders yet . Are you just here to smell the flowers?';
+    container.style.color="black";
+}
 }
 document.addEventListener("DOMContentLoaded",()=>{
 renderOrders();

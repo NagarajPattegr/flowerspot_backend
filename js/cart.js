@@ -18,6 +18,7 @@ async function getCartItems() {
 async function renderItems(){
     container.innerHTML='';
     const items = await getCartItems();
+    if(items){
     const card = document.createElement("div");
     card.classList.add("card");
     console.log(items);
@@ -34,6 +35,10 @@ async function renderItems(){
 `;
 container.appendChild(card);
     });
+}else{
+    container.innerHTML='No flowers , no love . Your cart is single and sad';
+    container.style.color="black";
+}
 }
 
 document.addEventListener("DOMContentLoaded", async(e) => {
