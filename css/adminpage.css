@@ -89,11 +89,14 @@ body{
 #formbl{
     width:100vw;
     height: 100vh;
-    background-color: black;
+    /* background-color: black; */
     color: #0066cc;
-    display: none;
+    display:none;
     position: relative;
     z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #orders::-webkit-scrollbar{
     display: none;

@@ -18,7 +18,7 @@ session_start();
     <link rel="stylesheet" href="./css/adminpage.css">
 </head>
 <body>
-    <div id="formbl"></div>
+    <!-- <div id="formbl"></div> -->
     <div id="hero-section">
         <div id="outer-container">
             <div id="container">
@@ -57,7 +57,7 @@ session_start();
             include("./config/dbconnection.php");
             $db = new DataBase();
             $connection = $db->connect();
-            $sql = "SELECT  users.user_name , flowers.flower_name , orders.price , orders.address ,orders.city , orders.pincode , orders.payment_method, orders.order_date FROM orders JOIN users ON  orders.user_id = users.id JOIN flowers ON orders.flower_id = flowers.flower_id";
+            $sql = "SELECT  users.user_name , flowers.flower_name ,flowers.image, orders.price , orders.address ,orders.city , orders.pincode , orders.payment_method, orders.order_date FROM orders JOIN users ON  orders.user_id = users.id JOIN flowers ON orders.flower_id = flowers.flower_id";
             $res = mysqli_query($connection, $sql);
             if(mysqli_num_rows($res)>0){
                 $i=0;
@@ -65,6 +65,7 @@ session_start();
                     echo "<div id='order_card'>";
                     echo ++$i."<br>";
                     echo "<h2>Order at {$row['order_date']}</h2>";
+                    echo "<img src={$row['image']} alt='Image'><br>";              
                     echo "<p>Customer name : {$row['user_name']}</p><br>";
                     echo "<p>Flower name : {$row['flower_name']}</p><br>";
                     echo "<p>Flower price : {$row['price']}</p><br>";
